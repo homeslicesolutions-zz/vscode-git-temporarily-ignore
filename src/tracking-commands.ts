@@ -14,12 +14,12 @@ export default class TrackingCommands {
 
   stop(file:Uri) {
     _log('STOP TRACKING...');
-    return this.run(STOP_TRACKING_COMMAND(file.path));
+    return this.run(STOP_TRACKING_COMMAND(file.fsPath));
   }
 
   restore(file:Uri) {
     _log('RESTORE TRACKING...');
-    return this.run(RESTORE_TRACKING_COMMAND(file.path));
+    return this.run(RESTORE_TRACKING_COMMAND(file.fsPath));
   }
 
   private async run(consoleCommand:string) {
